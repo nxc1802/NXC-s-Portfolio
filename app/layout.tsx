@@ -26,6 +26,16 @@ export const metadata: Metadata = {
   description: "Portfolio of NXC, a Fullstack Developer and AI Researcher from Da Nang, Vietnam. Showcasing web development, AI projects, and technical achievements.",
   keywords: ["NXC", "Portfolio", "AI Engineer", "Fullstack Developer", "Da Nang", "Next.js", "React", "OpenAI"],
   authors: [{ name: "NXC" }],
+  icons: {
+    icon: [
+      { url: "/icon.png", sizes: "any" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/icon.png",
+    apple: [
+      { url: "/icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   openGraph: {
     title: "NXC – Portfolio",
     description: "Portfolio of NXC, a Fullstack Developer and AI Researcher from Da Nang, Vietnam.",
