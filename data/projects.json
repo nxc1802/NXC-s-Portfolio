@@ -28,6 +28,16 @@
       "demo": "https://magicv-sand.vercel.app/",
       "repo": "https://github.com/nxc1802/MagicCV"
     }
+  },
+  {
+    "name": "MCP - Crawler",
+    "summary": "AI-powered website data collection tool - MCP Tools (Bypass banned bots and captchas)",
+    "tech": ["Python", "Selenium", "BeautifulSoup", "Requests", "Pandas", "PostgreSQL", "Gemini API", "MCP"],
+    "image": "/images/project/MCP_Crawl.png",
+    "links": {
+      "demo": "https://github.com/nxc1802/Crawl_MCP",
+      "repo": "https://github.com/nxc1802/Crawl_MCP"
+    }
   }
 ]
 
