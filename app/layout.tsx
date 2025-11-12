@@ -22,12 +22,12 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "NXC – Fullstack Developer & AI Researcher",
+  title: "NXC – Portfolio",
   description: "Portfolio of NXC, a Fullstack Developer and AI Researcher from Da Nang, Vietnam. Showcasing web development, AI projects, and technical achievements.",
   keywords: ["NXC", "Portfolio", "AI Engineer", "Fullstack Developer", "Da Nang", "Next.js", "React", "OpenAI"],
   authors: [{ name: "NXC" }],
   openGraph: {
-    title: "NXC – Fullstack Developer & AI Researcher",
+    title: "NXC – Portfolio",
     description: "Portfolio of NXC, a Fullstack Developer and AI Researcher from Da Nang, Vietnam.",
     type: "website",
     locale: "en_US",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NXC – Fullstack Developer & AI Researcher",
+    title: "NXC – Portfolio",
     description: "Portfolio of NXC, a Fullstack Developer and AI Researcher from Da Nang, Vietnam.",
   },
 };
