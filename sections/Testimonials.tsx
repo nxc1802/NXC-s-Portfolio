@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Section from '@/components/Section';
 import testimonialsData from '@/data/testimonials.json';
 
@@ -19,11 +20,13 @@ const Testimonials = () => {
               {/* Author Info - Centered with inline avatar */}
               <div className="flex items-center justify-center gap-3 pt-4 border-t border-white/10">
                 {/* Avatar */}
-                <div className="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden flex-shrink-0">
-                  <img 
+                <div className="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden flex-shrink-0 relative">
+                  <Image 
                     src={testimonial.image} 
                     alt={testimonial.name}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="48px"
+                    className="object-cover"
                   />
                 </div>
                 

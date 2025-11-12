@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Section from '@/components/Section';
 import Button from '@/components/Button';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
@@ -23,10 +24,12 @@ const Projects = () => {
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-blue-400/30 transition-all duration-300">
               {/* Project Image - Full size, no margin */}
               <div className="relative w-full h-64 bg-gradient-to-br from-blue-400 to-purple-600 overflow-hidden">
-                <img 
+                <Image 
                   src={project.image} 
                   alt={project.name}
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
                 />
                 
                 {/* Overlay on hover */}

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Section from '@/components/Section';
 import Button from '@/components/Button';
 import { FaGithub, FaLinkedin, FaEnvelope, FaEye, FaFacebook, FaTelegram, FaInstagram } from 'react-icons/fa';
@@ -61,11 +62,13 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="rounded-[36px] bg-gradient-to-br from-slate-900 via-slate-900/80 to-slate-900/50 border border-white/10 p-10 shadow-[0_35px_80px_rgba(2,6,23,0.75)]"
         >
-          <div className="w-28 h-28 rounded-[28px] overflow-hidden mx-auto mb-8 shadow-[0_30px_60px_rgba(59,130,246,0.45)] border-2 border-cyan-400/30">
-            <img 
+          <div className="relative w-28 h-28 rounded-[28px] overflow-hidden mx-auto mb-8 shadow-[0_30px_60px_rgba(59,130,246,0.45)] border-2 border-cyan-400/30">
+            <Image 
               src={profileData.profileImage} 
               alt={profileData.name}
-              className="w-full h-full object-cover"
+              fill
+              sizes="112px"
+              className="object-cover"
             />
           </div>
           <div className="text-center space-y-4">
