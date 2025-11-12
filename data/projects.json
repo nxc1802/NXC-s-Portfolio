@@ -1,0 +1,33 @@
+[
+  {
+    "name": "PiXity",
+    "summary": "Real-time tourism chatbot for Da Nang integrating transport, weather, and event APIs.",
+    "tech": ["Python", "Flask/FastAPI", "Pinecone", "Gemini API", "Docker", "CI/CD", "Telegram Bot"],
+    "image": "/images/project/pixity.png",
+    "links": {
+      "demo": "https://pix-agent-webpage.vercel.app",
+      "repo": "https://github.com/zok213/PixAgent_webbase"
+    }
+  },
+  {
+    "name": "Lock-Time Wallet",
+    "summary": "A blockchain-based lock-time wallet that allows users to lock their funds for a specified period of time.",
+    "tech": ["React", "Rust", "Docker", "CI/CD", "Blockchain", "Smart Contract", "Web3", "Solana Network"],
+    "image": "/images/project/wallet.png",
+    "links": {
+      "demo": "https://time-lock-wallet-blockchain-ten.vercel.app/",
+      "repo": "https://github.com/nxc1802/Frontend-Time-Lock-Wallet-Blockchain"
+    }
+  },
+  {
+    "name": "MagiCV",
+    "summary": "AI-powered CV builder designed for digital nomads. Create stunning, job-specific resumes that land you remote opportunities worldwide.",
+    "tech": ["React", "Node.js", "Supabase", "Gemini API", "Mastra", "PostgreSQL", "Docker", "Supabase Vector Search"],
+    "image": "/images/project/magicv.png",
+    "links": {
+      "demo": "https://magicv-sand.vercel.app/",
+      "repo": "https://github.com/nxc1802/MagicCV"
+    }
+  }
+]
+

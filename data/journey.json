@@ -1,0 +1,79 @@
+{
+  "periods": [
+    {
+      "id": "pixerse",
+      "year": "Jan 2025 - Present",
+      "title": "PiXerse",
+      "description": "AI Developer at PiXerse Technology",
+      "achievements": [
+        "Developed 'Pixity', an AI chatbot project to assist tourists in discovering famous locations in Da Nang.",
+        "Achieved 4th Place in the 'Nosana Builders Challenge: Agents 102' bounty.",
+        "Received Superteam Honorable Mention for the 'Timelocked Wallet' project (Aug 2025)."
+      ],
+      "gallery": [
+        {
+          "url": "/images/journey/PiXerse/pix.png",
+          "caption": "Member of the PiXerse company"
+        },
+        {
+          "url": "/images/journey/PiXerse/nosana.png",
+          "caption": "Achieved 4th Place in the 'Nosana Builders Challenge: Agents 102' bounty."
+        },
+        {
+          "url": "/images/journey/PiXerse/wallet.png",
+          "caption": "Honorable Mention from Superteam VietNam"
+        }
+      ]
+    },
+    {
+      "id": "fpt",
+      "year": "Aug 2022 - Aug 2026",
+      "title": "FPT University",
+      "description": "Infomation Technology - AI Engineering Major",
+      "achievements": [
+        "GPA: 8.28/10.0",
+        "Second Prize at the AI4SE 2025 competition",
+        "Finalist in AI4LIFE 2024, Research Connection 2025, and Research Festival 2025 competition",
+        "Member of the FPT university team for the AI Olympics 2025 - Central Regional Qualifier"
+      ],
+      "gallery": [
+        {
+          "url": "/images/journey/FPT/AI4SE_1.jpeg",
+          "caption": "Second Prize at the AI4SE 2025 competition"
+        },
+        {
+          "url": "/images/journey/FPT/OLP25_1.jpeg",
+          "caption": "AI Olympics 2025 - Central Regional Qualifier"
+        },
+        {
+          "url": "/images/journey/FPT/OLP25_2.jpeg",
+          "caption": "Member of VOAI3 team for the AI Olympics 2025 - Central Regional Qualifier"
+        },
+        {
+          "url": "/images/journey/FPT/ResFes_1.jpeg",
+          "caption": "Pitching at the finalist of Research Festival 2025"
+        }
+      ]
+    },
+    {
+      "id": "lqd",
+      "year": "2019 - 2022",
+      "title": "Le Quy Don High School for the Gifted",
+      "description": "Chemistry Major",
+      "achievements": [
+        "High School GPA: Above 9.0/10",
+        "Achieved 9.6/10 in Mathematics in the National High School Graduation Exam",
+        "Achieved a total score of 27/30 in the A00 block (Mathematics, Physics, Chemistry) in the National High School Graduation Exam",
+        "Second Prize in the City-level Chemistry Competition (Grade 12)",
+        "Honorable Mention in the School-level Chemistry Competition (Grade 11)",
+        "Member of the school's badminton team, participated in the City-level 'Hoi Khoe Phu Dong' Games"
+      ],
+      "gallery": [
+        {
+          "url": "/images/journey/LQD/taptheB1.jpg",
+          "caption": "Class of 2022 - Chemistry Major"
+        }
+      ]
+    }
+  ]
+}

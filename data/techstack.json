@@ -1,0 +1,67 @@
+{
+  "frontend": [
+    { "name": "React", "proficiency": 80, "years": "2+" },
+    { "name": "Next.js", "proficiency": 80, "years": "2+" },
+    { "name": "TypeScript", "proficiency": 70, "years": "1" },
+    { "name": "Tailwind CSS", "proficiency": 90, "years": "3+" },
+    { "name": "JavaScript (ES6+)", "proficiency": 50, "years": "1" },
+    { "name": "HTML5", "proficiency": 50, "years": "1" },
+    { "name": "Vite", "proficiency": 50, "years": "1" },
+    { "name": "Jest", "proficiency": 30, "years": "1-" },
+    { "name": "Ant Design", "proficiency": 20, "years": "1-" },
+    { "name": "React Native", "proficiency": 20, "years": "1-" },
+    { "name": "Three.js", "proficiency": 10, "years": "1-" }
+  ],
+  "backend": [
+    { "name": "Node.js", "proficiency": 80, "years": "1+" },
+    { "name": "Flask", "proficiency": 90, "years": "2+" },
+    { "name": "FastAPI", "proficiency": 90, "years": "2+" },
+    { "name": "Serverless (AWS Lambda)", "proficiency": 30, "years": "1-" },
+    { "name": "Google Cloud Functions", "proficiency": 30, "years": "1-" }
+  ],
+  "database": [
+    { "name": "MongoDB", "proficiency": 80, "years": "2+" },
+    { "name": "PostgreSQL", "proficiency": 78, "years": "1+" },
+    { "name": "Pinecone (Vector)", "proficiency": 80, "years": "1+" },
+    { "name": "Qdrant (Vector)", "proficiency": 80, "years": "1+" },
+    { "name": "Firebase / Firestore", "proficiency": 60, "years": "1" },
+    { "name": "Supabase", "proficiency": 60, "years": "1" },
+    { "name": "MySQL", "proficiency": 40, "years": "1-" },
+    { "name": "SQLite", "proficiency": 40, "years": "1-" },
+    { "name": "Redis", "proficiency": 60, "years": "1" },
+    { "name": "Elasticsearch", "proficiency": 20, "years": "1-" },
+    { "name": "SQLAlchemy (Python)", "proficiency": 50, "years": "1-" },
+    { "name": "GraphQL", "proficiency": 50, "years": "1+" }
+  ],
+  "ai": [
+    { "name": "Python", "proficiency": 90, "years": "3+" },
+    { "name": "TensorFlow", "proficiency": 90, "years": "3+" },
+    { "name": "PyTorch", "proficiency": 90, "years": "3+" },
+    { "name": "LangChain", "proficiency": 50, "years": "1+" },
+    { "name": "Mastra", "proficiency": 60, "years": "1+" },
+    { "name": "ReAct Agent", "proficiency": 70, "years": "2" },
+    { "name": "Scikit-learn", "proficiency": 90, "years": "2+" },
+    { "name": "Pandas", "proficiency": 90, "years": "3+" },
+    { "name": "NumPy", "proficiency": 90, "years": "3+" },
+    { "name": "Hugging Face", "proficiency": 80, "years": "3" },
+    { "name": "Keras", "proficiency": 90, "years": "3+" },
+    { "name": "OpenCV", "proficiency": 50, "years": "1" },
+    { "name": "Matplotlib / Seaborn", "proficiency": 90, "years": "3+" },
+    { "name": "Ollama", "proficiency": 40, "years": "1-" }
+  ],
+  "devops": [
+    { "name": "Docker", "proficiency": 75, "years": "1+" },
+    { "name": "GitHub Actions", "proficiency": 30, "years": "1-" },
+    { "name": "Vercel", "proficiency": 40, "years": "1" },
+    { "name": "Google Cloud Platform", "proficiency": 30, "years": "1+" },
+    { "name": "Microsoft Azure", "proficiency": 20, "years": "1-" }
+  ],
+  "other": [
+    { "name": "Github", "proficiency": 92, "years": "3+" },
+    { "name": "Figma", "proficiency": 40, "years": "1" },
+    { "name": "REST API", "proficiency": 60, "years": "1" },
+    { "name": "WebSockets", "proficiency": 50, "years": "1+" },
+    { "name": "Slack", "proficiency": 70, "years": "2" },
+    { "name": "Agile / Scrum", "proficiency": 50, "years": "1+" }
+  ]
+}
