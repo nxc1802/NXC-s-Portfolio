@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useId } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import profileData from '@/data/profile.json';
@@ -9,18 +9,24 @@ import profileData from '@/data/profile.json';
 const TEXT_TILT_ANGLE = 15; // Adjust this value to change the tilt angle
 
 interface RotatingTextProps {
-  text: string;
+  repeatedText: string;
   radius: number;
   tiltAngle: number;
   scale: number;
 }
 
-const RotatingText: React.FC<RotatingTextProps> = ({ text, radius, tiltAngle, scale }) => {
-  // Repeat text many times to ensure seamless loop
-  const repeatedText = `${text} • `.repeat(5);
+const RotatingText: React.FC<RotatingTextProps> = ({ repeatedText, radius, tiltAngle, scale }) => {
   
   // Animate startOffset for circular movement - seamless infinite loop
   const [offset, setOffset] = useState(0);
+  
+  // Generate unique IDs using useId() to avoid hydration mismatch
+  // Clean the ID to ensure it's valid for SVG (remove colons and other special chars)
+  const baseId = useId().replace(/:/g, '-');
+  const frontId = `textPathFront-${baseId}`;
+  const backId = `textPathBack-${baseId}`;
+  const clipFrontId = `clipFront-${baseId}`;
+  const clipBackId = `clipBack-${baseId}`;
   
   useEffect(() => {
     const duration = 20000; // 20 seconds for one full rotation
@@ -47,12 +53,6 @@ const RotatingText: React.FC<RotatingTextProps> = ({ text, radius, tiltAngle, sc
   const svgSize = radius * 2 + 100;
   const centerX = svgSize / 2;
   const centerY = svgSize / 2;
-  
-  // Generate unique IDs
-  const frontId = `textPathFront-${Math.random().toString(36).substr(2, 9)}`;
-  const backId = `textPathBack-${Math.random().toString(36).substr(2, 9)}`;
-  const clipFrontId = `clipFront-${Math.random().toString(36).substr(2, 9)}`;
-  const clipBackId = `clipBack-${Math.random().toString(36).substr(2, 9)}`;
   
   return (
     <>
@@ -86,10 +86,11 @@ const RotatingText: React.FC<RotatingTextProps> = ({ text, radius, tiltAngle, sc
             />
           </defs>
           <text
-            className="text-xs md:text-sm font-light tracking-wider"
+            className="font-light tracking-wider"
             style={{
               fill: 'rgb(165, 243, 252)',
               opacity: 0.8,
+              fontSize: 'clamp(0.625rem, 1.5vw, 0.875rem)', // Responsive: 10px on mobile, 14px on desktop
             }}
             clipPath={`url(#${clipFrontId})`}
           >
@@ -141,10 +142,11 @@ const RotatingText: React.FC<RotatingTextProps> = ({ text, radius, tiltAngle, sc
             />
           </defs>
           <text
-            className="text-xs md:text-sm font-light tracking-wider"
+            className="font-light tracking-wider"
             style={{
               fill: 'rgb(165, 243, 252)',
               opacity: 0.6,
+              fontSize: 'clamp(0.625rem, 1.5vw, 0.875rem)', // Responsive: 10px on mobile, 14px on desktop
             }}
             clipPath={`url(#${clipBackId})`}
           >
@@ -174,32 +176,43 @@ const Hero = () => {
   const [isHovered, setIsHovered] = useState(false);
   
   // Get full name from profile data or use a default
-  const fullName = profileData.name === 'NXC' ? 'Nguyễn Xuân Cường' : profileData.name;
+  const fullName = profileData.name === 'NXC' ? 'Nguyen Xuan Cuong' : profileData.name;
   
-  // Calculate radius based on image size - smaller to be closer to the person
-  const imageWidth = 320; // w-80 = 320px
-  const imageHeight = 416; // h-[416px]
-  // Use width as base and make it closer to the person (around 40-45% of width)
-  const radius = imageWidth * 0.411; // ~134px - closer to the person
+  // Chốt số lượng repeat
+  const REPEAT_COUNT = 5;
+  const textWithSeparator = `${fullName} • `;
+  const repeatedText = textWithSeparator.repeat(REPEAT_COUNT);
+  
+  // Tính toán radius dựa trên chiều dài text để chu vi vừa khít
+  // Sử dụng fontSize trung bình để tính toán (giữa mobile 10px và desktop 14px)
+  const averageFontSize = 12; // px - giá trị trung bình
+  // Ước tính chiều rộng mỗi ký tự: fontSize * 0.6 (cho font-light tracking-wider)
+  const avgCharWidth = averageFontSize * 0.68;
+  // Tính tổng chiều dài text khi repeat
+  const textLength = repeatedText.length * avgCharWidth;
+  // Tính radius từ chu vi: circumference = 2 * π * radius => radius = circumference / (2 * π)
+  // Chu vi = chiều dài text để vừa khít
+  const circumference = textLength;
+  const radius = circumference / (2 * Math.PI);
   
   // Scale factor when hovered
   const scale = isHovered ? 1.08 : 1;
 
   return (
-    <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-4 md:px-8 pt-12 pb-28 relative">
+    <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-3 sm:px-4 md:px-8 pt-8 sm:pt-12 pb-20 sm:pb-28 relative">
       <div className="max-w-4xl mx-auto w-full text-center relative">
         {/* Header Text */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-6 relative z-10"
+          className="mb-4 sm:mb-6 relative z-10"
           id="nxc-header"
         >
-          <h1 className="inline-flex items-center gap-4 text-lg md:text-xl uppercase tracking-[0.8em] font-heading font-black text-transparent bg-clip-text bg-gradient-to-r from-slate-100 via-cyan-200 to-sky-400 drop-shadow-[0_10px_25px_rgba(14,165,233,0.45)]">
-            <span className="w-2.5 h-2.5 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(34,211,238,0.85)]" />
+          <h1 className="inline-flex items-center gap-2 sm:gap-3 md:gap-4 text-sm sm:text-lg md:text-xl uppercase tracking-[0.3em] sm:tracking-[0.5em] md:tracking-[0.8em] font-heading font-black text-transparent bg-clip-text bg-gradient-to-r from-slate-100 via-cyan-200 to-sky-400 drop-shadow-[0_10px_25px_rgba(14,165,233,0.45)]">
+            <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(34,211,238,0.85)]" />
             NXC&nbsp;-&nbsp;Portfolio
-            <span className="w-5 h-[2px] bg-gradient-to-r from-sky-400 to-purple-500" />
+            <span className="w-4 h-[2px] sm:w-5 sm:h-[2px] bg-gradient-to-r from-sky-400 to-purple-500" />
           </h1>
         </motion.div>
 
@@ -208,10 +221,10 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-8 relative mt-[208px] md:mt-[450px]"
+          className="mb-4 relative mt-[120px] sm:mt-[160px] md:mt-[450px]"
           id="nxc-name"
         >
-          <h2 className="relative z-10 text-[clamp(4rem,13vw,11rem)] font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-sky-200 to-indigo-400 font-heading uppercase tracking-tight leading-none drop-shadow-[0_25px_45px_rgba(59,130,246,0.45)]">
+          <h2 className="relative z-10 text-[clamp(3rem,12vw,11rem)] sm:text-[clamp(3.5rem,13vw,11rem)] font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-sky-200 to-indigo-400 font-heading uppercase tracking-tight leading-none drop-shadow-[0_25px_45px_rgba(59,130,246,0.45)]">
             {profileData.name}
           </h2>
           
@@ -227,7 +240,7 @@ const Hero = () => {
             }}
           >
             <motion.div
-              className="relative w-80 h-[416px] md:w-[400px] md:h-[500px] overflow-visible rounded-[32px]"
+              className="relative w-64 h-[332px] sm:w-72 sm:h-[374px] md:w-[400px] md:h-[500px] overflow-visible rounded-[24px] sm:rounded-[28px] md:rounded-[32px]"
               style={{
                 transformOrigin: 'center bottom',
               }}
@@ -239,7 +252,7 @@ const Hero = () => {
               {/* Rotating text container */}
               <div className="rotating-text-container">
                 <RotatingText
-                  text={fullName}
+                  repeatedText={repeatedText}
                   radius={radius}
                   tiltAngle={TEXT_TILT_ANGLE}
                   scale={scale}
@@ -247,13 +260,13 @@ const Hero = () => {
               </div>
               
               {/* Image with z-index to be between front and back text */}
-              <div className="relative w-full h-full z-[2] rounded-[32px] overflow-hidden">
+              <div className="relative w-full h-full z-[2] rounded-[24px] sm:rounded-[28px] md:rounded-[32px] overflow-hidden">
                 <Image
                   src={heroImage}
                   alt={`${profileData.name} portrait`}
                   fill
                   priority
-                  sizes="(max-width: 768px) 20rem, 25rem"
+                  sizes="(max-width: 640px) 16rem, (max-width: 768px) 18rem, 25rem"
                   className="object-contain"
                 />
               </div>
@@ -261,17 +274,14 @@ const Hero = () => {
           </motion.div>
         </motion.div>
         
-        {/* Spacer to push content down and account for image overlap */}
-        <div className="h-[416px] md:h-[500px] mb-12" />
-
         {/* Title */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-light max-w-2xl mx-auto"
+          className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 font-light max-w-2xl mx-auto mt-6 sm:mt-8 md:mt-12 px-2"
         >
-          <p>{profileData.title}</p>
+          <p className="leading-relaxed">{profileData.title}</p>
         </motion.div>
       </div>
     </section>
