@@ -7,6 +7,7 @@
       "description": "AI Developer at PiXerse Technology",
       "achievements": [
         "Developed 'Pixity', an AI chatbot project to assist tourists in discovering famous locations in Da Nang.",
+        "Achieved the second runner-up position in the Hackathon GDG DevFest MienTrung",
         "Achieved 4th Place in the 'Nosana Builders Challenge: Agents 102' bounty.",
         "Received Superteam Honorable Mention for the 'Timelocked Wallet' project (Aug 2025)."
       ],
@@ -22,6 +23,10 @@
         {
           "url": "/images/journey/PiXerse/wallet.png",
           "caption": "Honorable Mention from Superteam VietNam"
+        },
+        {
+          "url": "/images/journey/FPT/DevFest2025.png",
+          "caption": "The second runner-up in the Hackathon GDG DevFest MienTrung"
         }
       ]
     },
