@@ -37,11 +37,16 @@
       "description": "Infomation Technology - AI Engineering Major",
       "achievements": [
         "GPA: 8.28/10.0",
+        "A full-tuition FPT University scholarship",
         "Second Prize at the AI4SE 2025 competition",
         "Finalist in AI4LIFE 2024, Research Connection 2025, and Research Festival 2025 competition",
         "Member of the FPT university team for the AI Olympics 2025 - Central Regional Qualifier"
       ],
       "gallery": [
+        {
+          "url": "/images/journey/FPT/Tuition.png",
+          "caption": "A full-tuition FPT University scholarship"
+        },
         {
           "url": "/images/journey/FPT/AI4SE_1.jpeg",
           "caption": "Second Prize at the AI4SE 2025 competition"
