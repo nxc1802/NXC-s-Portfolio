@@ -38,6 +38,16 @@
       "demo": "https://github.com/nxc1802/Crawl_MCP",
       "repo": "https://github.com/nxc1802/Crawl_MCP"
     }
+  },
+  {
+    "name": "Medagen",
+    "summary": "Medagen is an AI-powered patient triage assistant utilizing LangChain ReAct Agent and Gemini 2.5Flash, integrated with Computer Vision and RAG for safe medical recommendations.",
+    "tech": ["TypeScript", "Fastify", "LangChain", "Gemini", "Supabase", "Computer Vision", "RAG", "MCP", "AI Agent"],
+    "image": "/images/project/Medagen.png",
+    "links": {
+      "demo": "https://medagen.vercel.app/",
+      "repo": "https://github.com/nxc1802/Medagen"
+    }
   }
 ]
 
