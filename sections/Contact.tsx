@@ -30,19 +30,19 @@ const Contact = () => {
     },
     {
       name: 'Facebook',
-      href: 'https://facebook.com/nxc1802',
+      href: profileData.socialLinks.facebook,
       icon: FaFacebook,
       accent: 'from-blue-600 to-indigo-600',
     },
     {
       name: 'Telegram',
-      href: 'https://t.me/nxc1802',
+      href: profileData.socialLinks.telegram,
       icon: FaTelegram,
       accent: 'from-sky-400 to-cyan-400',
     },
     {
       name: 'Instagram',
-      href: 'https://instagram.com/nxc1802',
+      href: profileData.socialLinks.instagram,
       icon: FaInstagram,
       accent: 'from-pink-500 via-orange-400 to-yellow-400',
     },
