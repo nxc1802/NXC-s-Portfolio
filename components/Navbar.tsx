@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaHome, FaUser, FaCode, FaProjectDiagram, FaStar, FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaUser, FaCode, FaProjectDiagram, FaBook, FaStar, FaEnvelope } from 'react-icons/fa';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -24,7 +24,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       // Update active section based on scroll position
-      const sections = ['hero', 'about', 'tech', 'projects', 'testimonials', 'contact'];
+      const sections = ['hero', 'about', 'tech', 'projects', 'research', 'testimonials', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -52,6 +52,7 @@ const Navbar = () => {
     { id: 'about', label: 'Journey', icon: FaUser },
     { id: 'tech', label: 'Tech', icon: FaCode },
     { id: 'projects', label: 'Projects', icon: FaProjectDiagram },
+    { id: 'research', label: 'Research', icon: FaBook },
     { id: 'testimonials', label: 'Reviews', icon: FaStar },
     { id: 'contact', label: 'Contact', icon: FaEnvelope },
   ];

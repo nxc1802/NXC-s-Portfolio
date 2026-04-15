@@ -3,7 +3,7 @@
     "name": "PiXity",
     "summary": "Real-time tourism chatbot for Da Nang integrating transport, weather, and event APIs.",
     "tech": ["Python", "Flask/FastAPI", "Pinecone", "Gemini API", "Docker", "CI/CD", "Telegram Bot"],
-    "image": "/images/project/pixity.png",
+    "image": "/images/projects/pixity.png",
     "links": {
       "demo": "https://pix-agent-webpage.vercel.app",
       "repo": "https://github.com/zok213/PixAgent_webbase"
@@ -13,7 +13,7 @@
     "name": "Lock-Time Wallet",
     "summary": "A blockchain-based lock-time wallet that allows users to lock their funds for a specified period of time.",
     "tech": ["React", "Rust", "Docker", "CI/CD", "Blockchain", "Smart Contract", "Web3", "Solana Network"],
-    "image": "/images/project/wallet.png",
+    "image": "/images/projects/wallet.png",
     "links": {
       "demo": "https://time-lock-wallet-blockchain-ten.vercel.app/",
       "repo": "https://github.com/nxc1802/Frontend-Time-Lock-Wallet-Blockchain"
@@ -23,7 +23,7 @@
     "name": "MagiCV",
     "summary": "AI-powered CV builder designed for digital nomads. Create stunning, job-specific resumes that land you remote opportunities worldwide.",
     "tech": ["React", "Node.js", "Supabase", "Gemini API", "Mastra", "PostgreSQL", "Docker", "Supabase Vector Search"],
-    "image": "/images/project/magicv.png",
+    "image": "/images/projects/magicv.png",
     "links": {
       "demo": "https://magicv-sand.vercel.app/",
       "repo": "https://github.com/nxc1802/MagicCV"
@@ -33,21 +33,60 @@
     "name": "MCP - Crawler",
     "summary": "AI-powered website data collection tool - MCP Tools (Bypass banned bots and captchas)",
     "tech": ["Python", "Selenium", "BeautifulSoup", "Requests", "Pandas", "PostgreSQL", "Gemini API", "MCP"],
-    "image": "/images/project/MCP_Crawl.png",
+    "image": "/images/projects/MCP_Crawl.png",
     "links": {
       "demo": "https://github.com/nxc1802/Crawl_MCP",
       "repo": "https://github.com/nxc1802/Crawl_MCP"
     }
   },
   {
+    "name": "Woman Day",
+    "summary": "A romantic gift website for International Women's Day featuring high-quality UI effects, a gallery, letters, canvas snow, and a music player.",
+    "tech": ["React", "Vite", "Tailwind CSS", "GSAP", "Howler.js", "Supabase", "Canvas API"],
+    "image": "/images/projects/love.png",
+    "links": {
+      "demo": "https://woman-day-alpha.vercel.app/",
+      "repo": "https://github.com/nxc1802/Woman_Day"
+    }
+  },
+  {
+    "name": "LocalMate",
+    "summary": "A multi-modal travel assistant and contextual agent API for Da Nang city, featuring itinerary planning and AI-powered local recommendations.",
+    "tech": ["Python", "FastAPI", "Supabase", "PostgreSQL", "PGVector", "Neo4j", "Gemini AI", "React"],
+    "image": "/images/projects/localmate.png",
+    "links": {
+      "demo": "https://itinerary-project-sigma.vercel.app/",
+      "repo": "https://github.com/ManTT-Data/LocalMate"
+    }
+  },
+  {
+    "name": "Lab Management",
+    "summary": "A professional laboratory management dashboard providing real-time monitoring of occupancy, entry/exit counts, and video analytics.",
+    "tech": ["Next.js", "Tailwind CSS", "Janus WebRTC", "Vercel", "Data Visualization"],
+    "image": "/images/projects/lab.png",
+    "links": {
+      "demo": "https://dat-lab-management.vercel.app",
+      "repo": "https://github.com/manhmitcf/DAT_Lab_Management/"
+    }
+  },
+  {
     "name": "Medagen",
     "summary": "Medagen is an AI-powered patient triage assistant utilizing LangChain ReAct Agent and Gemini 2.5Flash, integrated with Computer Vision and RAG for safe medical recommendations.",
     "tech": ["TypeScript", "Fastify", "LangChain", "Gemini", "Supabase", "Computer Vision", "RAG", "MCP", "AI Agent"],
-    "image": "/images/project/Medagen.png",
+    "image": "/images/projects/Medagen.png",
     "links": {
       "demo": "https://medagen.vercel.app/",
       "repo": "https://github.com/nxc1802/Medagen"
     }
+  },
+  {
+    "name": "MathSolver",
+    "summary": "Hệ thống giải toán hình học và trực quan hóa kiến thức thông qua AI Multi-Agent, hỗ trợ giải bài tập từ hình ảnh (OCR) và tạo minh họa chuyển động bằng video tự động với Manim.",
+    "tech": ["Next.js", "FastAPI", "Python", "Manim", "AI Agents", "Docker", "OpenRouter", "LLM"],
+    "image": "/images/projects/math_solver.png",
+    "links": {
+      "demo": "https://math-solver-silk.vercel.app/",
+      "repo": "https://github.com/nxc1802/MathSolver"
+    }
   }
 ]
-

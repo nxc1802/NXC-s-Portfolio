@@ -25,7 +25,7 @@
     { "name": "Pinecone (Vector)", "proficiency": 80, "years": "1+" },
     { "name": "Qdrant (Vector)", "proficiency": 80, "years": "1+" },
     { "name": "Firebase / Firestore", "proficiency": 60, "years": "1" },
-    { "name": "Supabase", "proficiency": 60, "years": "1" },
+    { "name": "Supabase", "proficiency": 90, "years": "1" },
     { "name": "MySQL", "proficiency": 40, "years": "1-" },
     { "name": "SQLite", "proficiency": 40, "years": "1-" },
     { "name": "Redis", "proficiency": 60, "years": "1" },

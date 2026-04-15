@@ -4,6 +4,7 @@ import Hero from '@/sections/Hero';
 import MyJourney from '@/sections/MyJourney';
 import TechStack from '@/sections/TechStack';
 import Projects from '@/sections/Projects';
+import Research from '@/sections/Research';
 import Testimonials from '@/sections/Testimonials';
 import Contact from '@/sections/Contact';
 
@@ -21,6 +22,7 @@ export default function Home() {
           <MyJourney />
           <TechStack />
           <Projects />
+          <Research />
           <Testimonials />
           <Contact />
         </main>

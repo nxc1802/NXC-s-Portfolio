@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Identification of Plant Leaf Diseases Using Machine Learning",
+    "summary": "A system for automating the identification of plant pathologies using image processing and machine learning classifiers. The study focuses on early detection of leaf diseases to help farmers minimize crop loss and improve agricultural yield.",
+    "tech": ["Machine Learning", "Image Processing", "CNN", "Precision Agriculture", "SVM"],
+    "image": "/images/research/leaf.png",
+    "pdf": "https://drive.google.com/file/d/1C1UmtYmYN1q72dGiZ-QnILFhtghNS1Vg/view?usp=drive_link"
+  },
+  {
+    "name": "The GYM Exercise Classification Dataset",
+    "summary": "A comprehensive dataset of 22 distinct gym exercises designed for training and validating pose estimation models. It includes detailed categorization of movements like bench press, deadlifts, and squats to support robust fitness tracking applications.",
+    "tech": ["Data Preprocessing", "Computer Vision", "Deep Learning", "Data Visualization", "Data Analysis"],
+    "image": "/images/research/gym_dataset.png",
+    "pdf": "https://drive.google.com/file/d/1ceNAV6jbBr5WyH33Bi82FW-vRYNPeM44/view?usp=drive_link"
+  },
+  {
+    "name": "Comparative and Combined Study of Deep Learning Techniques for Gym Exercise Classification",
+    "summary": "This research evaluates and combines multiple deep learning architectures, including CNNs and RNNs (LSTM/GRU), to achieve superior accuracy in human activity recognition for gym environments by analyzing sequential skeletal data.",
+    "tech": ["Deep Learning", "CNN", "RNN/LSTM", "Human Activity Recognition", "Mediapipe"],
+    "image": "/images/research/gym_paper.png",
+    "pdf": "https://drive.google.com/file/d/1L5Vi10YiWKZArKmDK_A7PQRQ3pDMiLGO/view?usp=sharing"
+  },
+  {
+    "name": "MAFIS: Multi-Agent Imitation by learning and sampling from FactorIzed Soft Q-function",
+    "summary": "MAFIS introduces a scalable framework for Multi-Agent Imitation Learning by factorizing the imitation objective and using soft Q-functions as energy-based models, providing a non-adversarial approach to complex multi-agent control.",
+    "tech": ["Multi-Agent Systems", "Reinforcement Learning", "Imitation Learning", "Soft Q-Learning", "Value Decomposition"],
+    "image": "/images/research/mafis.png",
+    "pdf": "https://drive.google.com/file/d/1f-_lmgSBEQNiokMz5ruVxllKGePAKLLs/view?usp=drive_link"
+  },
+  {
+    "name": "Towards Sparse Adversarial Perturbations: A Gradient-Guided Approach for Efficient Image Attacks",
+    "summary": "This paper proposes a gradient-guided method to generate efficient and sparse adversarial perturbations. The approach identifies critical pixels to manipulate, exposing the vulnerabilities of deep learning models to carefully crafted image attacks.",
+    "tech": ["Adversarial Machine Learning", "Computer Vision", "Gradient Optimization", "Model Robustness", "Cybersecurity"],
+    "image": "/images/research/AA.png",
+    "pdf": "https://drive.google.com/file/d/1DitwY3fDwt5S5XOb4LiS2O0MDBZtA2lA/view?usp=drive_link"
+  }
+]

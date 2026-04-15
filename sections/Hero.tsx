@@ -172,7 +172,7 @@ const RotatingText: React.FC<RotatingTextProps> = ({ repeatedText, radius, tiltA
 };
 
 const Hero = () => {
-  const heroImage = '/images/personal image/profile-hero.png';
+  const heroImage = '/images/personal/profile-hero.png';
   const [isHovered, setIsHovered] = useState(false);
   
   // Get full name from profile data or use a default
