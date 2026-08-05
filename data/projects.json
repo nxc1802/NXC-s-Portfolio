@@ -88,5 +88,16 @@
       "demo": "https://math-solver-silk.vercel.app/",
       "repo": "https://github.com/nxc1802/MathSolver"
     }
+  },
+  {
+    "name": "Manim Agent",
+    "summary": "Hệ thống AI chuyển đổi ý tưởng giáo dục thành storyboard, mã Manim tự động và render video toán học với cơ chế Human-in-the-loop (HITL) review.",
+    "tech": ["React", "FastAPI", "Python", "Celery", "Manim", "Redis", "Supabase", "Hugging Face", "AI Agent"],
+    "image": "/images/projects/manim_agent.png",
+    "links": {
+      "demo": "https://manim-agent-three.vercel.app/",
+      "repo": "https://github.com/nxc1802/Manim-Agent"
+    }
   }
 ]
+
