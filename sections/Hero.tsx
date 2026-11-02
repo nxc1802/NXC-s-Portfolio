@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useId } from 'react';
+import React, { useState, useEffect, useRef, useId } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import profileData from '@/data/profile.json';
@@ -16,9 +16,11 @@ interface RotatingTextProps {
 }
 
 const RotatingText: React.FC<RotatingTextProps> = ({ repeatedText, radius, tiltAngle, scale }) => {
-  
-  // Animate startOffset for circular movement - seamless infinite loop
-  const [offset, setOffset] = useState(0);
+  // Direct DOM refs to avoid 60-120fps React re-renders
+  const frontPath1Ref = useRef<SVGTextPathElement>(null);
+  const frontPath2Ref = useRef<SVGTextPathElement>(null);
+  const backPath1Ref = useRef<SVGTextPathElement>(null);
+  const backPath2Ref = useRef<SVGTextPathElement>(null);
   
   // Generate unique IDs using useId() to avoid hydration mismatch
   // Clean the ID to ensure it's valid for SVG (remove colons and other special chars)
@@ -31,13 +33,20 @@ const RotatingText: React.FC<RotatingTextProps> = ({ repeatedText, radius, tiltA
   useEffect(() => {
     const duration = 20000; // 20 seconds for one full rotation
     let animationFrameId: number;
-    let startTime = Date.now();
+    const startTime = Date.now();
     
     const animate = () => {
       const elapsed = Date.now() - startTime;
       // Use modulo to create seamless loop - when it reaches 100%, it seamlessly continues
       const progress = (elapsed % duration) / duration;
-      setOffset(progress * 100);
+      const offset = progress * 100;
+      const offsetMinus100 = offset - 100;
+
+      if (frontPath1Ref.current) frontPath1Ref.current.setAttribute('startOffset', `${offset}%`);
+      if (frontPath2Ref.current) frontPath2Ref.current.setAttribute('startOffset', `${offsetMinus100}%`);
+      if (backPath1Ref.current) backPath1Ref.current.setAttribute('startOffset', `${offset}%`);
+      if (backPath2Ref.current) backPath2Ref.current.setAttribute('startOffset', `${offsetMinus100}%`);
+
       animationFrameId = requestAnimationFrame(animate);
     };
     
@@ -96,15 +105,17 @@ const RotatingText: React.FC<RotatingTextProps> = ({ repeatedText, radius, tiltA
           >
             {/* First textPath - main rotation */}
             <textPath 
+              ref={frontPath1Ref}
               href={`#${frontId}`} 
-              startOffset={`${offset}%`}
+              startOffset="0%"
             >
               {repeatedText}
             </textPath>
             {/* Second textPath - seamless continuation for infinite loop */}
             <textPath 
+              ref={frontPath2Ref}
               href={`#${frontId}`} 
-              startOffset={`${offset - 100}%`}
+              startOffset="-100%"
             >
               {repeatedText}
             </textPath>
@@ -152,15 +163,17 @@ const RotatingText: React.FC<RotatingTextProps> = ({ repeatedText, radius, tiltA
           >
             {/* First textPath - main rotation */}
             <textPath 
+              ref={backPath1Ref}
               href={`#${backId}`} 
-              startOffset={`${offset}%`}
+              startOffset="0%"
             >
               {repeatedText}
             </textPath>
             {/* Second textPath - seamless continuation for infinite loop */}
             <textPath 
+              ref={backPath2Ref}
               href={`#${backId}`} 
-              startOffset={`${offset - 100}%`}
+              startOffset="-100%"
             >
               {repeatedText}
             </textPath>

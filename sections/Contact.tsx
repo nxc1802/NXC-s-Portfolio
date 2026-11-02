@@ -86,7 +86,7 @@ const Contact = () => {
           </div>
           <div className="mt-10 space-y-6 text-center">
             <p className="text-gray-400 text-sm">
-              Need a prototype, AI integration, or a high-performance product? Let's jump on a
+              Need a prototype, AI integration, or a high-performance product? Let&apos;s jump on a
               call and make it happen.
             </p>
             

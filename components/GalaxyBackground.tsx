@@ -12,10 +12,10 @@ const GalaxyBackground = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Set canvas size
+    // Set canvas size to viewport
     const setCanvasSize = () => {
       canvas.width = window.innerWidth;
-      canvas.height = document.documentElement.scrollHeight;
+      canvas.height = window.innerHeight;
     };
     setCanvasSize();
     window.addEventListener('resize', setCanvasSize);
@@ -32,7 +32,7 @@ const GalaxyBackground = () => {
     }
 
     const stars: Star[] = [];
-    const starCount = 200;
+    const starCount = window.innerWidth < 768 ? 80 : 160;
 
     // Create stars
     for (let i = 0; i < starCount; i++) {
@@ -46,6 +46,8 @@ const GalaxyBackground = () => {
         opacityDirection: Math.random() > 0.5 ? 0.01 : -0.01,
       });
     }
+
+    let animationFrameId: number;
 
     // Animation
     const animate = () => {
@@ -91,14 +93,16 @@ const GalaxyBackground = () => {
         }
       });
 
-      // Draw connecting lines between nearby stars
+      // Draw connecting lines between nearby stars (distance threshold squared = 10000)
+      const maxDistanceSq = 10000;
       stars.forEach((star, i) => {
         stars.slice(i + 1).forEach((otherStar) => {
           const dx = star.x - otherStar.x;
           const dy = star.y - otherStar.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+          const distSq = dx * dx + dy * dy;
 
-          if (distance < 100) {
+          if (distSq < maxDistanceSq) {
+            const distance = Math.sqrt(distSq);
             ctx.beginPath();
             ctx.moveTo(star.x, star.y);
             ctx.lineTo(otherStar.x, otherStar.y);
@@ -109,13 +113,14 @@ const GalaxyBackground = () => {
         });
       });
 
-      requestAnimationFrame(animate);
+      animationFrameId = requestAnimationFrame(animate);
     };
 
-    animate();
+    animationFrameId = requestAnimationFrame(animate);
 
     return () => {
       window.removeEventListener('resize', setCanvasSize);
+      cancelAnimationFrame(animationFrameId);
     };
   }, []);
 

@@ -38,15 +38,20 @@
       "id": "fpt",
       "year": "Aug 2022 - Aug 2026",
       "title": "FPT University",
-      "description": "Infomation Technology - AI Engineering Major",
+      "description": "Information Technology - AI Engineering Major",
       "achievements": [
         "GPA: 8.28/10.0",
         "A full-tuition FPT University scholarship",
+        "Third Prize at the Vietnam AI Olympics for Students 2026 - Central Regional Qualifier",
         "Second Prize at the AI4SE 2025 competition",
         "Finalist in AI4LIFE 2024, Research Connection 2025, Research Festival 2025, and Grab The Beyond 2026 competition",
         "Member of the FPT university team for the AI Olympics 2025 - Central Regional Qualifier"
       ],
       "gallery": [
+        {
+          "url": "/images/journey/FPT/OLP26.jpg",
+          "caption": "Third Prize at the Vietnam AI Olympics for Students 2026 - Central Regional Qualifier"
+        },
         {
           "url": "/images/journey/FPT/Tuition.png",
           "caption": "A full-tuition FPT University scholarship"

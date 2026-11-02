@@ -4,7 +4,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Section from '@/components/Section';
-import Button from '@/components/Button';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import projectsData from '@/data/projects.json';
 
@@ -40,6 +39,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"
+                      aria-label={`View live demo of ${project.name}`}
                     >
                       <FaExternalLinkAlt className="text-white" size={20} />
                     </a>
@@ -48,6 +48,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"
+                      aria-label={`View source code of ${project.name}`}
                     >
                       <FaGithub className="text-white" size={20} />
                     </a>

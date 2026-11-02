@@ -40,6 +40,7 @@ const Research = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors text-white font-medium"
+                        aria-label={`Read research paper: ${item.name}`}
                       >
                         <FaFilePdf size={20} />
                         <span>View PDF</span>

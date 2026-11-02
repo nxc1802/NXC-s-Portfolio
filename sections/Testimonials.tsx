@@ -14,7 +14,7 @@ const Testimonials = () => {
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 h-full">
               {/* Quote Text - Centered */}
               <p className="text-gray-300 dark:text-gray-400 text-center leading-relaxed mb-6 italic">
-                "{testimonial.quote}"
+                &ldquo;{testimonial.quote}&rdquo;
               </p>
 
               {/* Author Info - Centered with inline avatar */}

@@ -43,7 +43,7 @@
     "name": "Woman Day",
     "summary": "A romantic gift website for International Women's Day featuring high-quality UI effects, a gallery, letters, canvas snow, and a music player.",
     "tech": ["React", "Vite", "Tailwind CSS", "GSAP", "Howler.js", "Supabase", "Canvas API"],
-    "image": "/images/projects/love.png",
+    "image": "/images/projects/love_2.png",
     "links": {
       "demo": "https://woman-day-alpha.vercel.app/",
       "repo": "https://github.com/nxc1802/Woman_Day"
@@ -81,7 +81,7 @@
   },
   {
     "name": "MathSolver",
-    "summary": "Hệ thống giải toán hình học và trực quan hóa kiến thức thông qua AI Multi-Agent, hỗ trợ giải bài tập từ hình ảnh (OCR) và tạo minh họa chuyển động bằng video tự động với Manim.",
+    "summary": "Multi-agent geometry problem solver and knowledge visualizer. Extracts equations from images via OCR and auto-generates 2D/3D animated motion videos using Manim.",
     "tech": ["Next.js", "FastAPI", "Python", "Manim", "AI Agents", "Docker", "OpenRouter", "LLM"],
     "image": "/images/projects/math_solver.png",
     "links": {
@@ -91,7 +91,7 @@
   },
   {
     "name": "Manim Agent",
-    "summary": "Hệ thống AI chuyển đổi ý tưởng giáo dục thành storyboard, mã Manim tự động và render video toán học với cơ chế Human-in-the-loop (HITL) review.",
+    "summary": "Distributed AI platform converting educational concepts into structured storyboards, automated Manim code, and rendered videos with Human-in-the-loop (HITL) review.",
     "tech": ["React", "FastAPI", "Python", "Celery", "Manim", "Redis", "Supabase", "Hugging Face", "AI Agent"],
     "image": "/images/projects/manim_agent.png",
     "links": {

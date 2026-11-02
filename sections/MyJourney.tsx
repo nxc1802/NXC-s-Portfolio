@@ -20,7 +20,7 @@ type JourneyPeriod = {
   gallery?: GalleryImage[];
 };
 
-const fallbackGallery: GalleryImage[] = [{ url: '/images/test.jpg', caption: 'Journey Memory' }];
+const fallbackGallery: GalleryImage[] = [{ url: '/images/journey/PiXerse/pix.png', caption: 'Journey Memory' }];
 
 const JourneyGallery: React.FC<{
   images?: GalleryImage[];

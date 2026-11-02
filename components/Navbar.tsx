@@ -4,22 +4,17 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaHome, FaUser, FaCode, FaProjectDiagram, FaBook, FaStar, FaEnvelope } from 'react-icons/fa';
 
+const NAV_PARTICLES = [
+  { left: 20, top: 30, delay: 0.2, duration: 2.5 },
+  { left: 50, top: 70, delay: 0.8, duration: 3.2 },
+  { left: 75, top: 25, delay: 1.4, duration: 2.8 },
+  { left: 35, top: 80, delay: 0.5, duration: 3.5 },
+  { left: 85, top: 60, delay: 1.1, duration: 2.2 },
+];
+
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
-  const [particles, setParticles] = useState<Array<{ left: number; top: number; delay: number; duration: number }>>([]);
-
-  useEffect(() => {
-    // Generate particle positions on client only
-    setParticles(
-      [...Array(5)].map(() => ({
-        left: Math.random() * 100,
-        top: Math.random() * 100,
-        delay: Math.random() * 2,
-        duration: 2 + Math.random() * 2,
-      }))
-    );
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -151,7 +146,7 @@ const Navbar = () => {
 
         {/* Floating particles effect */}
         <div className="absolute inset-0 overflow-hidden rounded-full pointer-events-none">
-          {particles.map((particle, i) => (
+          {NAV_PARTICLES.map((particle, i) => (
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-blue-400/30 rounded-full"
